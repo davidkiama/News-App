@@ -1,3 +1,6 @@
+{% import 'macros.html' as macro%}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,29 +22,17 @@
 
     <h2>Techcrunch</h2>
     <ul>
-        {% for news in techcrunch %}
-        <li>
-            <a href="/news/{{news.id}}">{{news.title}}</a>
-        </li>
-        {% endfor %}
+        {{macro.displayNewsList(techcrunch)}}
     </ul>
 
     <h2>Cnn</h2>
     <ul>
-        {% for news in cnn %}
-        <li>
-            <a href="/news/{{news.id}}">{{news.title}}</a>
-        </li>
-        {% endfor %}
+        {{macro.displayNewsList(cnn)}}
     </ul>
 
     <h2>BBC</h2>
     <ul>
-        {% for news in bbc %}
-        <li>
-            <a href="/news/{{news.id}}">{{news.title}}</a>
-        </li>
-        {% endfor %}
+        {{macro.displayNewsList(bbc)}}
     </ul>
 </body>
 

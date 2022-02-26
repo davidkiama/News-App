@@ -20,10 +20,7 @@ def get_news(source):
     '''
     Gets the json response from the request url
     '''
-
     get_news_url = base_url.format(source, api_key)
-    print(get_news_url)
-
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
         get_news_response = json.loads(get_news_data)
