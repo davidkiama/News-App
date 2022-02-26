@@ -1,1 +1,4 @@
 instance/
+app/__pycache__/
+app/__pycache__/request.cpython-38.pyc
+app/__pycache__/views.cpython-38.pyc
