@@ -15,6 +15,34 @@
 
 <body>
     <h1>News app</h1>
+
+
+    <h2>Techcrunch</h2>
+    <ul>
+        {% for news in techcrunch %}
+        <li>
+            <a href="/news/{{news.id}}">{{news.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h2>Cnn</h2>
+    <ul>
+        {% for news in cnn %}
+        <li>
+            <a href="/news/{{news.id}}">{{news.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <h2>BBC</h2>
+    <ul>
+        {% for news in bbc %}
+        <li>
+            <a href="/news/{{news.id}}">{{news.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 
 </html>

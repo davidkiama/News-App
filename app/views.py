@@ -9,10 +9,11 @@ from .request import get_news
 def index():
 
     techcrunch = get_news('techcrunch')
-    print(techcrunch)
+    cnn = get_news('cnn')
+    bbc = get_news('bbc-news')
     title = 'Home - News XXIV'
 
-    return render_template('index.html', title=title, techcrunch=techcrunch)
+    return render_template('index.html', title=title, techcrunch=techcrunch, cnn=cnn, bbc=bbc)
 
 
 @app.route('/news/<news_id>')
