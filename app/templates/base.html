@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% block title %}
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title> Welcome to News XXIV</title>
+    {% endif %}
+    {% endblock title %}
+</head>
+
+<body>
+    <div id="container">
+
+        {% block header %}
+        <header class="header">
+            <h1>News app</h1>
+            <nav class="nav">
+                <a href="/techrunch" class="nav__item">Techrunch</a>
+                <a href="/cnn" class="nav__item">CNN</a>
+                <a href="/bbc-news" class="nav__item">BBC</a>
+                <a href="/abc-news" class="nav__item">ABC</a>
+            </nav>
+        </header>
+        {% endblock header %}
+
+
+        <main class="main">
+            {% block content %}
+            <!--  -->
+            {% endblock content %}
+        </main>
+
+        {% block footer %}
+        <footer class="footer">
+            <!-- footer -->
+        </footer>
+        {% endblock footer %}
+
+    </div>
+
+</body>
+
+</html>

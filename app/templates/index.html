@@ -1,39 +1,25 @@
+{% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 
+{% block content %}
+<h2>Techcrunch</h2>
+<ul>
+    {{macro.displayNewsList(techcrunch)}}
+</ul>
 
-<!DOCTYPE html>
-<html lang="en">
+<h2>Cnn</h2>
+<ul>
+    {{macro.displayNewsList(cnn)}}
+</ul>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h2>BBC</h2>
+<ul>
+    {{macro.displayNewsList(bbc)}}
+</ul>
 
-    {% if title %}
-    <title>{{title}}</title>
-    {% else %}
-    <title> Welcome to News XXIV</title>
-    {% endif %}
-</head>
+<h2>ABC</h2>
+<ul>
+    {{macro.displayNewsList(abc)}}
+</ul>
 
-<body>
-    <h1>News app</h1>
-
-
-    <h2>Techcrunch</h2>
-    <ul>
-        {{macro.displayNewsList(techcrunch)}}
-    </ul>
-
-    <h2>Cnn</h2>
-    <ul>
-        {{macro.displayNewsList(cnn)}}
-    </ul>
-
-    <h2>BBC</h2>
-    <ul>
-        {{macro.displayNewsList(bbc)}}
-    </ul>
-</body>
-
-</html>
+{% endblock content %}
