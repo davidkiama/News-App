@@ -24,6 +24,9 @@ body {
   --color-primary: #00bcd4;
   --color-secondary: #f44336;
 }
+#container {
+  padding: 1rem;
+}
 
 .header {
   background-color: var(--color-primary);
@@ -51,4 +54,51 @@ body {
 
 .nav__item:hover {
   color: var(--color-secondary);
+}
+
+/* News styling */
+.main {
+  padding: 1rem;
+}
+
+.news-page-heading {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.news-list > :first-child img {
+  width: 50vw;
+  height: auto;
+}
+
+.news-list > :first-child h3 {
+  font-size: 4rem;
+}
+
+.news-list > :first-child p {
+  font-size: 2.2rem;
+}
+
+.news-item {
+  display: flex;
+  column-gap: 2rem;
+  padding: 0.5rem;
+}
+
+.news-item__img {
+  width: 25vw;
+  height: auto;
+}
+
+.news_item__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
