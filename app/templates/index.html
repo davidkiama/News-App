@@ -1,25 +1,22 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro%}
 
+
 {% block content %}
-<h2>Techcrunch</h2>
-<ul>
-    {{macro.displayNewsList(techcrunch)}}
-</ul>
+<div class="news-list">
+    {% for news in news_list %}
 
-<h2>Cnn</h2>
-<ul>
-    {{macro.displayNewsList(cnn)}}
-</ul>
+    <div class="news-item">
 
-<h2>BBC</h2>
-<ul>
-    {{macro.displayNewsList(bbc)}}
-</ul>
+        <img src="{{news.urlToImage}} " alt="News Img" class="news-item__img">
+        <div class="news_item__content">
+            <h3>{{news.title}}</h3>
+            <span>{{news.publishedAt}} </span>
+            <p>{{news.description}}</p>
+            <a href="{{news.url}}">Read more</a>
+        </div>
 
-<h2>ABC</h2>
-<ul>
-    {{macro.displayNewsList(abc)}}
-</ul>
-
+    </div>
+    {% endfor %}
+</div>
 {% endblock content %}
