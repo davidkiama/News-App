@@ -1,22 +1,20 @@
-from flask import render_template
+from flask import render_template, url_for
 from app import app
-from .request import get_news
+from .request import get_news, get_news_by_source
 
 # Views
 
 
 @app.route('/')
 def index():
-
-    techcrunch = get_news('techcrunch')
-    cnn = get_news('cnn')
-    bbc = get_news('bbc-news')
-    abc = get_news('abc-news')
+    news_list = get_news()
     title = 'Home - News XXIV'
+    return render_template('index.html', title=title, news_list=news_list)
 
-    return render_template('index.html', title=title, abc=abc, techcrunch=techcrunch, cnn=cnn, bbc=bbc)
 
-
-@app.route('/news/<news_id>')
-def news(news_id):
-    return render_template('news.html', news_id=news_id)
+@app.route('/news/<source>')
+def news(source):
+    news_list = get_news_by_source(source)
+    news_page = source.capitalize()
+    title = f'{news_page} - News XXIV'
+    return render_template('news.html', title=title, news_list=news_list, )
