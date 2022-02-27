@@ -12,7 +12,7 @@ source_url = None
 def configure_request(app):
     global api_key, base_url, source_url
     api_key = app.config['NEWS_API_KEY']
-    print(api_key)
+    
     base_url = app.config['NEWS_API_BASE_URL']
     source_url = app.config['NEWS_API_SOURCE_URL']
 
@@ -22,8 +22,7 @@ def get_news():
     Gets the json response from the request url
     '''
     get_news_url = base_url.format(api_key)
-    print('*****************************************************************')
-    print(get_news_url)
+    
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
         get_news_response = json.loads(get_news_data)
