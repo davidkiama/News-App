@@ -9,6 +9,8 @@ from ..models import News
 @main.route('/')
 def index():
     news_list = get_news()
+    print('*****************************************************************')
+
     title = 'Home - News XXIV'
     return render_template('index.html', title=title, news_list=news_list)
 
