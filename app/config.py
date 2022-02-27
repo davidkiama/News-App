@@ -5,7 +5,9 @@ class Config:
     Global configuration of the parent
     '''
 
-    NEWS_API_BASE_URL = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
+    NEWS_API_BASE_URL = 'https://newsapi.org/v2/top-headlines?country=us&apiKey={}'
+
+    NEWS_API_SOURCE_URL = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
 
 
 class ProdConfig(Config):
