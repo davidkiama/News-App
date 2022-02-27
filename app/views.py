@@ -15,6 +15,6 @@ def index():
 @app.route('/news/<source>')
 def news(source):
     news_list = get_news_by_source(source)
-    news_page = source.capitalize()
+    news_page = source.upper()
     title = f'{news_page} - News XXIV'
-    return render_template('news.html', title=title, news_list=news_list, )
+    return render_template('news.html', title=title, news_list=news_list, news_page=news_page)

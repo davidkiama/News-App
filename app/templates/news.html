@@ -1,16 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News </title>
 
-</head>
+{% block content %}
+<h2 class="news-page-heading">Top Headlines from {{news_page}} </h2>
+<div class="news-list">
+    {% for news in news_list %}
 
-<body>
-    <h4>{{news_id}} </h4>
-</body>
+    <div class="news-item">
 
-</html>
+        <img src="{{news.urlToImage}} " alt="News Img" class="news-item__img">
+        <div class="news_item__content">
+            <h3>{{news.title}}</h3>
+            <span>{{news.publishedAt}} </span>
+            <p>{{news.description}}</p>
+            <a href="{{news.url}}">Read more</a>
+        </div>
+
+    </div>
+    {% endfor %}
+</div>
+
+
+{% endblock content %}
