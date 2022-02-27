@@ -27,7 +27,7 @@ body {
   --color-grey-light: hsl(0, 0%, 94%);
 }
 #container {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .heading-1 {

@@ -1,18 +1,19 @@
 from flask import render_template, url_for
-from app import app
-from .request import get_news, get_news_by_source
+from . import main
+from ..request import get_news, get_news_by_source
+from ..models import News
 
 # Views
 
 
-@app.route('/')
+@main.route('/')
 def index():
     news_list = get_news()
     title = 'Home - News XXIV'
     return render_template('index.html', title=title, news_list=news_list)
 
 
-@app.route('/news/<source>')
+@main.route('/news/<source>')
 def news(source):
     news_list = get_news_by_source(source)
     news_page = source.upper()
