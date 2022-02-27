@@ -19,22 +19,21 @@
 <body>
     <div id="container">
 
-        {% block header %}
+
         <header class="header">
             <h1>News app</h1>
             <nav class="nav">
-                <a href="/techrunch" class="nav__item">Techrunch</a>
-                <a href="/cnn" class="nav__item">CNN</a>
-                <a href="/bbc-news" class="nav__item">BBC</a>
-                <a href="/abc-news" class="nav__item">ABC</a>
+                <a href="{{url_for('news', source='axios')}}" class="nav__item">Axios</a>
+                <a href="{{url_for('news', source='cnn')}}" class="nav__item">CNN</a>
+                <a href="{{url_for('news', source='bbc-news')}}" class="nav__item">BBC</a>
+                <a href="{{url_for('news', source='abc-news')}}" class="nav__item">ABC</a>
             </nav>
         </header>
-        {% endblock header %}
 
 
         <main class="main">
             {% block content %}
-            <!--  -->
+
             {% endblock content %}
         </main>
 
