@@ -20,10 +20,15 @@ This is a flask web application that fetches news from the [News API](https://ne
 ## Project setup and instructions
 
 Download or clone the source code from [GitHub](https://github.com/davidkiama/News-App.git)
+
 Download and install any stable version of Python. [Python 3.7.3](https://www.python.org/downloads/)
+
 Donwload pip and install it. [pip](https://pip.pypa.io/en/stable/)
+
 Create a virtual environment. [virtualenv](https://virtualenv.pypa.io/en/stable/) `virtualenv venv`
+
 Install the required packages using pip. `pip install -r requirements.txt`
+
 Run the application. `python wsgi.py`
 
 ## Support and contact details
