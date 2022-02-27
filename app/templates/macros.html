@@ -2,13 +2,16 @@
 
 {% for news in news_list %}
 
-<li>
-    <a href="/news/{{news.id}}">{{news.title}}</a>
-</li>
+<div class="news-item">
+
+    <img src="{{news.urlToImage}} " alt="News Img" class="news-item__img">
+    <div class="news_item__content">
+        <h3>{{news.title}}</h3>
+        <span>{{news.publishedAt}} </span>
+        <p>{{news.description}}</p>
+        <a href="{{news.url}}">Read more</a>
+    </div>
+
+</div>
 {% endfor %}
 {% endmacro %}
-
-<!-- {% macro displayNews(news) %}
-<h1>{{news.title}}</h1>
-<p>{{news.content}}</p>
-{% endmacro %} -->
